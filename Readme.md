@@ -1,7 +1,5 @@
 ## 專案使用說明
 
-GitHub程式碼路徑: https://github.com/keyijung/keyijung.github.io.git
-
 此為一甜點咖啡網購系統網站。
 使用者可透過前台網站進行簡易網購行為，
 管理者可透過後台系統進行簡易網購管理行為。
@@ -10,12 +8,15 @@ GitHub程式碼路徑: https://github.com/keyijung/keyijung.github.io.git
 
 - sql 程式碼
 
-請參照此路徑檔的sql程式碼: ANYI Cafe\App_Data\anyicafe-db-SQLcodes-210703-upload
+資料庫名稱: anyicafe;
+
+請參照此sql程式碼檔案: anyicafe-db-SQLcodes-210703
 
 - sql 帳密
 
-user id = sa;
-password = 1qaz@wsx
+user id = 請至Web.config檔的<connectionStrings>處，變更為您電腦的sql帳號;
+
+password = 請至Web.config檔的<connectionStrings>處，變更為您電腦的sql密碼。
 
 ## 簡單操作說明
 
@@ -26,10 +27,18 @@ password = 1qaz@wsx
 
 - 測試帳密
 
-  使用者: cake@gmail.com
+  使用者: cake@gmail.com;
+
   密碼: cake
 
 - 管理者帳密
   
-  使用者: admin@gmail.com
+  使用者: admin@gmail.com;
+
   密碼: admin
+
+## 綠界信用卡測試
+
+- 測試卡號: 4311-9522-2222-2222;
+- 測試安全碼: 222;
+- 測試有效月/年: 輸入的MM/YYYY值請大於現在當下時間的月年，例如在2016/04/20當天作測試，請設定05/2016(含)之後的有效月年，否則回應刷卡失敗。

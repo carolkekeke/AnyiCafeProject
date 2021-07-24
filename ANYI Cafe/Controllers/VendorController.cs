@@ -134,7 +134,7 @@ namespace ANYI_Cafe.Controllers
                 var data = db.vendor
                     .OrderByDescending(m => m.vno)
                     .FirstOrDefault();
-                if (data != null) str_vno = "S" + (int.Parse(data.vno.Substring(1, 4)) + 1).ToString().PadLeft(4, '0');
+                if (data != null) str_vno = "V" + (int.Parse(data.vno.Substring(1, 4)) + 1).ToString().PadLeft(4, '0');
                 return str_vno;
             }
         }

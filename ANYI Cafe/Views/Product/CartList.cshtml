@@ -79,8 +79,16 @@
         </div>
         <div class="row mt-4 d-flex align-items-center col-lg-12">
             <div class="text-center">
-                <a href="/Home/Order" class="btn btn-primary btn1" style="font-size:initial"><i class="fa fa-reply "></i> 繼續購物</a>
-                <a href="/Product/Checkout" class="btn btn-primary btn1" style="font-size:initial">下一步</a>
+                @if (Model.Count() > 0)
+                {
+                    <a href="/Home/Order" class="btn btn-primary btn1" style="font-size:initial"><i class="fa fa-reply "></i> 繼續購物</a>
+                    <a href="/Product/Checkout" class="btn btn-primary btn1" style="font-size:initial">下一步</a>
+                }
+                else
+                {
+                    <a href="/Home/Order" class="btn btn-primary btn1" style="font-size:initial"><i class="fa fa-reply "></i> 返回購物</a>
+                }
+
             </div>
         </div>
 

@@ -14,7 +14,7 @@ namespace ANYI_Cafe.Models
         public string receive_name { get; set; }
         [Display(Name = "付款人信箱 :")]
         [Required(ErrorMessage = "付款人信箱不可空白")]
-        [DisplayFormat(ApplyFormatInEditMode = true, ConvertEmptyStringToNull = false, HtmlEncode = true, NullDisplayText = "請輸入電子信箱")]
+        [EmailAddress(ErrorMessage = "請輸入正確格式的電子信箱!")]
         public string receive_email { get; set; }
         [Display(Name = "付款人電話 :")]
         [Required(ErrorMessage = "付款人電話不可空白")]

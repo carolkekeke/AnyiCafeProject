@@ -450,9 +450,17 @@ namespace ANYI_Cafe.Controllers
             bool result = false;
             using (GmailService mail = new GmailService())
             {
+                string str_subject = string.Format("{0} - 商品訂購成功!!", AppService.AppName);
+                string str_body = "<br/><br/>";
+                str_body += "很高興通知您，您的訂單已確認。<br/>";
+                str_body += "我們將於三個工作日內處理您的訂單!<br/><br/>";
+                str_body += "本信件由電腦系統自動寄出，請勿直接回覆!<br/>";
+                str_body += "若您需要其他協助，歡迎您透過官網留言與我們聯繫。<br/><br/>";
+                str_body += string.Format("{0} 祝您有美好安逸的一天!", AppService.AppName);
+
                 mail.ReceiveEmail = email;
-                mail.Subject = "商品訂購成功";
-                mail.Body = "您的商品已訂購成功";
+                mail.Subject = str_subject;
+                mail.Body = str_body;
                 mail.Send();
                 result = true;
             }
@@ -465,9 +473,17 @@ namespace ANYI_Cafe.Controllers
             var data = db.Orders.Where(m => m.order_no == order_no).FirstOrDefault();
             using (GmailService mail = new GmailService())
             {
+                string str_subject = string.Format("{0} - 商品訂購成功!!", AppService.AppName);
+                string str_body = "<br/><br/>";
+                str_body += "很高興通知您，您的訂單已確認。<br/>";
+                str_body += "我們將於三個工作日內處理您的訂單!<br/><br/>";
+                str_body += "本信件由電腦系統自動寄出，請勿直接回覆!<br/>";
+                str_body += "若您需要其他協助，歡迎您透過官網留言與我們聯繫。<br/><br/>";
+                str_body += string.Format("{0} 祝您有美好安逸的一天!", AppService.AppName);
+
                 mail.ReceiveEmail = data.user_no;
-                mail.Subject = "商品訂購成功";
-                mail.Body = "您的商品已訂購成功";
+                mail.Subject = str_subject;
+                mail.Body = str_body;
                 mail.Send();
                 result = true;
             }
